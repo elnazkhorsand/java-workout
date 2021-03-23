@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// TODO: 18/03/2021 The Catalog should throw a FruitUnavailableException if the fruit is not currently available  
 
 public class Catalog {
 
