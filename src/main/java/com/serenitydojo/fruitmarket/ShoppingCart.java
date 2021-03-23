@@ -11,4 +11,8 @@ public class ShoppingCart {
         this.catalog = catalog;
         this.items = new ArrayList<>();
     }
+
+    // TODO: 18/03/2021  You can add items to your shopping cart, which should keep a running total.
+
+
 }
