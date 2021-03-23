@@ -25,10 +25,10 @@ public class TheCatalog {
         Catalog catalog = new Catalog(Map.of(Apple, 2.50, Orange, 3.00, Pear, 2.00, Peach, 1.50));
 
         //When
-        String availableFruitList = catalog.showAvailableFruitListAlphabetically();
+        String availableFruitsString = catalog.showAvailableFruitListAlphabetically();
 
         //Then
-        assertThat(availableFruitList).isEqualTo("Apple, Orange, Peach, Pear");
+        assertThat(availableFruitsString).isEqualTo("Apple, Orange, Peach, Pear");
     }
 
 
