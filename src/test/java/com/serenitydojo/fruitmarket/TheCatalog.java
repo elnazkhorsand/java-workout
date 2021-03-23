@@ -46,4 +46,9 @@ public class TheCatalog {
         assertThat(orangePrice).isEqualTo(3.50);
     }
 
+    @Test (expected = FruitUnavailableException.class)
+    public void shouldThrowUnavailableFruitExceptionIfFruitIsNotAvailable(){
+        Catalog catalog = new Catalog(Map.of(Apple, 2.50, Orange, 3.00, Pear, 2.00, Peach, 1.50));
+        catalog.getPriceOf(Mulberries);
+    }
 }

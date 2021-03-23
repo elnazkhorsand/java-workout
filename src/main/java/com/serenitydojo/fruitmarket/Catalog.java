@@ -22,7 +22,10 @@ public class Catalog {
 
     //The Catalog should report the price of a given type of fruit
     public Double getPriceOf(Fruit fruit) {
-        return pricePerKilo.get(fruit);
+        if (pricePerKilo.get(fruit)!= null){
+            return pricePerKilo.get(fruit);
+        }
+        else throw new FruitUnavailableException(fruit + " is currently unavailable!");
     }
 
 
