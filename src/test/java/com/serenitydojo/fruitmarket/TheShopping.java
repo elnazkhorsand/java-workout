@@ -19,6 +19,7 @@ public class TheShopping {
     ShoppingCartItem strawberriesItem = new ShoppingCartItem(Fruit.Strawberries, 1.5, 1.0);
     ShoppingCartItem peachItem = new ShoppingCartItem(Fruit.Peach, 1.2, 1.0);
 
+    ShoppingCartItem FiveKiloAppleItem = new ShoppingCartItem(Fruit.Apple, 5.0, 1.0);
 
     @Test
     public void shouldBeAbleToAddItemToShoppingCart(){
@@ -51,7 +52,17 @@ public class TheShopping {
         myShoppingCart.addToShoppingCart(strawberriesItem);
         myShoppingCart.addToShoppingCart(peachItem);
 
-        assertThat(myShoppingCart.returnRunningTotalPrice()).isEqualTo(12.99);
+        assertThat(myShoppingCart.getRunningTotal()).isEqualTo(12.99);
     }
 
+    @Test
+    public void shouldGetTenPercentDiscountIfHaveAtLeastFiveKilosOfOneFruit(){
+        ShoppingCart myShoppingCart = new ShoppingCart(myCatalog);
+        myShoppingCart.addToShoppingCart(FiveKiloAppleItem);
+        myShoppingCart.addToShoppingCart(orangeItem);
+        myShoppingCart.addToShoppingCart(strawberriesItem);
+        myShoppingCart.addToShoppingCart(peachItem);
+
+        assertThat(myShoppingCart.getRunningTotal()).isEqualTo(15.291);
+    }
 }
