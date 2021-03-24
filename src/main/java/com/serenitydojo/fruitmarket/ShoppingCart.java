@@ -36,8 +36,9 @@ public class ShoppingCart {
     public double getRunningTotal() {
 
         for (ShoppingCartItem item:items ){
-            if (item.getQuantity()>=5) return Math.round(((runningTotal-(runningTotal * 0.1))*100)/100);
+            if (item.getQuantity()>=5) return (Math.round(((runningTotal-(runningTotal * 0.1))*1000))/1000.0000000);
         }
-        return Math.round((runningTotal*100)/100);
+
+        return (Math.round(runningTotal*1000))/1000.000000;
     }
 }
