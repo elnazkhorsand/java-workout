@@ -43,8 +43,8 @@ public class WhenDoingMaths {
         assertThat(calculator.evaluate("10 + 5 - 6")).isEqualTo(9);
     }
 
-//    @Test
-//    public void shouldMultiplyNumbers() {
-//        assertThat(calculator.evaluate("10 * 5")).isEqualTo(50);
-//    }
+    @Test
+    public void shouldMultiplyNumbers() {
+        assertThat(calculator.evaluate("10 * 5")).isEqualTo(50);
+    }
 }

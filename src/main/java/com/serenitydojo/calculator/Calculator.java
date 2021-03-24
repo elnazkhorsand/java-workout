@@ -64,7 +64,9 @@ public class Calculator {
                     case "-":
                         result = result - secondOperand;
                         break;
-
+                    case "*":
+                        result = result * secondOperand;
+                        break;
                 }
 
             }
