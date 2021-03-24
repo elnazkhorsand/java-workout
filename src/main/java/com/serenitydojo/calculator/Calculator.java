@@ -45,25 +45,24 @@ public class Calculator {
     }
 
     private int calculation(){
-        int firstOperand = 0;
         int secondOperand;
-        int result = 0;
-
+        int result;
 
         if (operators.size()==0) return operands.get(0);
         else {
 
-            if (operators.get(0).equals("*")) firstOperand = 1;
+            result = operands.get(0);
 
-            for (int operand: operands){
-                secondOperand = operand;
-                for (String operator: operators){
-                    switch (operator){
-                        case "+":
-                            result = result + firstOperand + secondOperand;
-                            break;
-                    }
+            for (int i = 1 ; i<operands.size() ; i++){
+                secondOperand = operands.get(i);
+
+
+                switch (operators.get(i-1)){
+                    case "+":
+                        result = result + secondOperand;
+                        break;
                 }
+
             }
         }
     return result;

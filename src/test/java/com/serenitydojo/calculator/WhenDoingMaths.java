@@ -28,11 +28,11 @@ public class WhenDoingMaths {
         assertThat(calculator.evaluate("1 + 1")).isEqualTo(2);
     }
 
-//    @Test
-//    public void shouldAddThreeNumbers() {
-//        assertThat(calculator.evaluate("1 + 2 + 3")).isEqualTo(6);
-//    }
-//
+    @Test
+    public void shouldAddThreeNumbers() {
+        assertThat(calculator.evaluate("1 + 2 + 3")).isEqualTo(6);
+    }
+
 //    @Test
 //    public void shouldAlsoSubtract() {
 //        assertThat(calculator.evaluate("10 - 6")).isEqualTo(4);
