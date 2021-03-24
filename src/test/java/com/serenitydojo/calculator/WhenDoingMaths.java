@@ -38,11 +38,11 @@ public class WhenDoingMaths {
         assertThat(calculator.evaluate("10 - 6")).isEqualTo(4);
     }
 
-//    @Test
-//    public void shouldAddAndSubtract() {
-//        assertThat(calculator.evaluate("10 + 5 - 6")).isEqualTo(9);
-//    }
-//
+    @Test
+    public void shouldAddAndSubtract() {
+        assertThat(calculator.evaluate("10 + 5 - 6")).isEqualTo(9);
+    }
+
 //    @Test
 //    public void shouldMultiplyNumbers() {
 //        assertThat(calculator.evaluate("10 * 5")).isEqualTo(50);
