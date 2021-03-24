@@ -16,20 +16,33 @@ public class Calculator {
         //Getting all the elements in the expression and split them by space and keep them in 'elements' array.
         elements = expression.split(" ");
 
+        //Check if the elements are valid or not
         for(String element: elements){
-            if (!checkValidity(element))
+            if (!isNumber(element) && !isValidOperator(element))
                 throw new IllegalMathsOperatorException("There is an invalid element in the expression");
         }
+
+
 
     return -1;
     }
 
-    private boolean checkValidity(String element){
+    private boolean isNumber(String element){
+        return element.chars().allMatch(Character::isDigit);
+    }
+
+    private boolean isValidOperator(String element){
         for (String operator: validOperators){
             if(element.equals(operator))
                 return true;
         }
-        return element.chars().allMatch(Character::isDigit);
+        return false;
     }
+
+//    private int calculation(){
+//        for(String element: elements){
+//            if
+//        }
+//    }
 
 }

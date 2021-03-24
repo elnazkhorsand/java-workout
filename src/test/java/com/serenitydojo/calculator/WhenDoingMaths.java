@@ -22,7 +22,7 @@ public class WhenDoingMaths {
 //    public void shouldReturnTheValueOfASingleNumber() {
 //        assertThat(calculator.evaluate("1")).isEqualTo(1);
 //    }
-//
+
 //    @Test
 //    public void shouldAddTwoNumbers() {
 //        assertThat(calculator.evaluate("1 + 1")).isEqualTo(2);
