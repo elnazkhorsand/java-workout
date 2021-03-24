@@ -113,4 +113,14 @@ public class TheShopping {
         assertThat(myShoppingCart.getRunningTotal()).isEqualTo(47.106);
 
     }
+
+    @Test
+    public void shouldReturnTotalPriceAzZeroWhenTheBasketIsEmpty(){
+
+        //Create a shopping cart - We wont add any item to check the total price of the empty basket
+        ShoppingCart mySHoppingCart = new ShoppingCart(myCatalog);
+
+        assertThat(mySHoppingCart.getRunningTotal()).isEqualTo(0.0);
+
+    }
 }
