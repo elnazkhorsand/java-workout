@@ -33,11 +33,11 @@ public class WhenDoingMaths {
         assertThat(calculator.evaluate("1 + 2 + 3")).isEqualTo(6);
     }
 
-//    @Test
-//    public void shouldAlsoSubtract() {
-//        assertThat(calculator.evaluate("10 - 6")).isEqualTo(4);
-//    }
-//
+    @Test
+    public void shouldAlsoSubtract() {
+        assertThat(calculator.evaluate("10 - 6")).isEqualTo(4);
+    }
+
 //    @Test
 //    public void shouldAddAndSubtract() {
 //        assertThat(calculator.evaluate("10 + 5 - 6")).isEqualTo(9);
