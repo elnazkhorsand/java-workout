@@ -18,10 +18,10 @@ public class WhenDoingMaths {
         calculator.evaluate("1 ^ 2");
     }
 
-//    @Test
-//    public void shouldReturnTheValueOfASingleNumber() {
-//        assertThat(calculator.evaluate("1")).isEqualTo(1);
-//    }
+    @Test
+    public void shouldReturnTheValueOfASingleNumber() {
+        assertThat(calculator.evaluate("1")).isEqualTo(1);
+    }
 
 //    @Test
 //    public void shouldAddTwoNumbers() {

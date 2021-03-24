@@ -19,12 +19,12 @@ public class Calculator {
         //Check if the elements are valid or not
         for(String element: elements){
             if (!isNumber(element) && !isValidOperator(element))
-                throw new IllegalMathsOperatorException("There is an invalid element in the expression");
+                throw new IllegalMathsOperatorException("There is an invalid element in the expression!");
         }
 
 
 
-    return -1;
+    return calculation();
     }
 
     private boolean isNumber(String element){
@@ -39,10 +39,31 @@ public class Calculator {
         return false;
     }
 
-//    private int calculation(){
-//        for(String element: elements){
-//            if
-//        }
-//    }
+    private int calculation(){
+        int firstOperand = 0;
+        int secondOperand = 0;
+        String operator;
+        for(String element: elements){
+            if (isNumber(element)) secondOperand = Integer.parseInt(element);
+            else if (isValidOperator(element)){
+                switch (element) {
+                    case "+":
+                        firstOperand = firstOperand + secondOperand;
+                        break;
+                    case "-":
+                        firstOperand = firstOperand - secondOperand;
+                        break;
+                    case "*":
+                        firstOperand = firstOperand * secondOperand;
+                        break;
+                    default:
+                        throw new IllegalMathsOperatorException("There is an invalid element in the expression!");
+                }
+
+            }
+        }
+        if(firstOperand == 0) return secondOperand;
+        else return firstOperand;
+    }
 
 }
