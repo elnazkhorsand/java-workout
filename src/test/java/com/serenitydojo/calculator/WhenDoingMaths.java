@@ -23,11 +23,11 @@ public class WhenDoingMaths {
         assertThat(calculator.evaluate("1")).isEqualTo(1);
     }
 
-//    @Test
-//    public void shouldAddTwoNumbers() {
-//        assertThat(calculator.evaluate("1 + 1")).isEqualTo(2);
-//    }
-//
+    @Test
+    public void shouldAddTwoNumbers() {
+        assertThat(calculator.evaluate("1 + 1")).isEqualTo(2);
+    }
+
 //    @Test
 //    public void shouldAddThreeNumbers() {
 //        assertThat(calculator.evaluate("1 + 2 + 3")).isEqualTo(6);
