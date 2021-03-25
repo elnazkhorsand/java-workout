@@ -71,4 +71,15 @@ public class WhenWorkingWithJavaLists {
         assertThat(names).isEmpty();
         assertThat(names.size()).isEqualTo(0);
     }
+
+    @Test
+    public void findingElementInList(){
+        List<String> names = Arrays.asList("Z_0", "H_1", "M_2", "E_3", "N_4", "U_5", "P_6", "E_3", "E_3", "E_3");
+
+        int indexOfE_3 = names.indexOf("E_3");
+        int lastIndexOfE_3 = names.lastIndexOf("E_3");
+
+        assertThat(indexOfE_3).isEqualTo(3);
+        assertThat(lastIndexOfE_3).isEqualTo(9);
+    }
 }
