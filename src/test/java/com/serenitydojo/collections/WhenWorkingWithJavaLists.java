@@ -82,4 +82,16 @@ public class WhenWorkingWithJavaLists {
         assertThat(indexOfE_3).isEqualTo(3);
         assertThat(lastIndexOfE_3).isEqualTo(9);
     }
+
+    @Test
+    public void findingASubList(){        // 0      1       2       3       4       5       6      7
+        List<String> names = Arrays.asList("Tom", "Judi", "Sara", "Jack", "Joe", "Peter", "Loe", "Sam");
+
+        List<String> subNames = names.subList(2, 6);
+        assertThat(subNames).contains("Sara", "Jack", "Joe", "Peter");
+
+        //Including the last element in the sub list:
+        List<String> subNamesIncludingLastElement = names.subList(4, 8);
+        assertThat(subNamesIncludingLastElement).contains("Joe", "Peter", "Loe", "Sam");
+    }
 }
