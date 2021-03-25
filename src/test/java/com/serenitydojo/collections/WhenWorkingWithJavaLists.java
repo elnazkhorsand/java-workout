@@ -94,4 +94,21 @@ public class WhenWorkingWithJavaLists {
         List<String> subNamesIncludingLastElement = names.subList(4, 8);
         assertThat(subNamesIncludingLastElement).contains("Joe", "Peter", "Loe", "Sam");
     }
+
+    @Test
+    public void findingTheSize(){
+        List<String> names = new ArrayList<>();
+
+        names.add("First");
+        names.add("Two");
+        names.add("Three");
+        names.add("Four");
+
+        assertThat(names.size()).isEqualTo(4);
+
+        names.remove("Four");
+        names.remove("Three");
+
+        assertThat(names.size()).isEqualTo(2);
+    }
 }
