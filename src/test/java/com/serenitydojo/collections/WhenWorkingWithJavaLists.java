@@ -147,4 +147,23 @@ public class WhenWorkingWithJavaLists {
         assertThat(min).isEqualTo(15);
         assertThat(max).isEqualTo(70);
     }
+
+    @Test
+    public void combiningLists(){
+        List<String> names = Arrays.asList("One", "Two", "Three");
+        List<String> moreNames = new ArrayList<>();
+
+        moreNames.add("Four");
+        moreNames.add("Five");
+
+        assertThat(moreNames).contains("Four","Five");
+
+        moreNames.addAll(names);
+
+        assertThat(moreNames).contains("Four","Five", "One", "Two", "Three");
+
+        List<String> copyNames = new ArrayList<>(names);
+
+        assertThat(copyNames).contains("One", "Two", "Three");
+    }
 }
