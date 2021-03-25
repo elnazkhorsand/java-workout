@@ -40,4 +40,15 @@ public class WhenWorkingWithJavaLists {
         assertThat(names).contains("Sara","James","Kim");
         assertThat(ages).contains(20, 32, 17);
     }
+
+    @Test
+    public void immutableLists(){
+        //This type of initiation makes the List as immutable list which means, it wont be possible to change it later on.
+        List<String> immutableList = Arrays.asList("Mina","Mohsen","Elimo");
+
+        //When try to running the following commands you will receive: UnsupportedOperationException
+        //immutableList.remove("Mina");
+        //immutableList.add("NewName");
+        assertThat(immutableList).contains("Mina","Mohsen","Elimo");
+    }
 }
