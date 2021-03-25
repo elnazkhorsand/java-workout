@@ -24,4 +24,20 @@ public class WhenWorkingWithJavaLists {
         assertThat(simpleList).contains("a simple list", 123, true);
     }
 
+    @Test
+    public void createATypedList(){
+        List<String> names = new ArrayList<>();
+        List<Integer> ages = new ArrayList<>();
+
+        names.add("Sara");
+        names.add("James");
+        names.add("Kim");
+
+        ages.add(20);
+        ages.add(32);
+        ages.add(17);
+
+        assertThat(names).contains("Sara","James","Kim");
+        assertThat(ages).contains(20, 32, 17);
+    }
 }
