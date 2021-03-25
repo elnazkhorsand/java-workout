@@ -1,11 +1,7 @@
 package com.serenitydojo.collections;
-
-import org.graalvm.compiler.debug.Assertions;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -110,5 +106,19 @@ public class WhenWorkingWithJavaLists {
         names.remove("Three");
 
         assertThat(names.size()).isEqualTo(2);
+    }
+
+    @Test
+    public void convertingAListToASet(){       //0        1      2       3      4      5      6      7      8      9      10      11      12  -> Size: 13
+        List<String> namesList = Arrays.asList("Zero", "Zero", "Zero", "One", "One", "Two", "Two", "Two", "Two", "Two", "Two", "Three", "Four");
+
+        assertThat(namesList).contains("Zero", "Zero", "Zero", "One", "One", "Two", "Two", "Two", "Two", "Two", "Two", "Three", "Four");
+        assertThat(namesList.size()).isEqualTo(13);
+
+        //In Set, order wont exist, it is exactly like sets in math and there wont be any duplication.
+        Set<String> namesSet = new HashSet<>(namesList);
+
+        assertThat(namesSet).containsExactlyInAnyOrder("One", "Zero", "Three", "Four", "Two");
+        assertThat(namesSet.size()).isEqualTo(5);
     }
 }
