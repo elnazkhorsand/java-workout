@@ -136,4 +136,15 @@ public class WhenWorkingWithJavaLists {
         Collections.sort(ages);
         assertThat(ages).contains(1,2,3,4,5,6,7);
     }
+
+    @Test
+    public void findingMaxAndMinInAList(){
+        List<Integer> ages = Arrays.asList(23, 40, 16, 15, 50, 30, 70);
+
+        int min = Collections.min(ages);
+        int max = Collections.max(ages);
+
+        assertThat(min).isEqualTo(15);
+        assertThat(max).isEqualTo(70);
+    }
 }
