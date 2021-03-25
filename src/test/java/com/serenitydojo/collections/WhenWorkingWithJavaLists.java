@@ -121,4 +121,19 @@ public class WhenWorkingWithJavaLists {
         assertThat(namesSet).containsExactlyInAnyOrder("One", "Zero", "Three", "Four", "Two");
         assertThat(namesSet.size()).isEqualTo(5);
     }
+
+    @Test
+    public void sortingAList(){
+        List<String> names = Arrays.asList("BBBB", "ZZZZ", "CCCC", "RRRR", "MMMM", "WWWW", "QQQQ", "AAAA");
+        assertThat(names).contains("BBBB", "ZZZZ", "CCCC", "RRRR", "MMMM", "WWWW", "QQQQ", "AAAA");
+
+        Collections.sort(names);
+        assertThat(names).contains("AAAA","BBBB","CCCC","MMMM", "QQQQ", "RRRR", "WWWW", "ZZZZ");
+
+        List<Integer> ages = Arrays.asList(2, 4, 6, 1, 5, 3, 7);
+        assertThat(ages).contains(2, 4, 6, 1, 5, 3, 7);
+
+        Collections.sort(ages);
+        assertThat(ages).contains(1,2,3,4,5,6,7);
+    }
 }
