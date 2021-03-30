@@ -11,13 +11,13 @@ public class MyUtility {
 
     public static String reverse(String... strings) {
 
-        var result = "";
+        StringBuilder result = new StringBuilder();
         var size = strings.length - 1;
 
         for(int i=size; i>=0;i--){
-            result = result + strings[i] + " ";
+            result.append(strings[i]).append(" ");
         }
 
-        return result.trim();
+        return result.toString().trim();
     }
 }
