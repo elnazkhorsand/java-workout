@@ -46,4 +46,9 @@ public class WhenWorkingWithJavaStrings {
     public void capitalizeArrayOfWordsAndReturnsAString() {
         assertThat(MyUtility.capitalizeWords("one", "two", "three", "four")).isEqualTo("ONE TWO THREE FOUR");
     }
+
+    @Test
+    public void capitalizeOnlyTheFirstLetterOFEachWordAndReturnAStringWithSpace(){
+        assertThat(MyUtility.capitalizeFirstLetter("bLUe", "GReen", "yeLLOW", "bLAck")).isEqualTo("Blue Green Yellow Black");
+    }
 }

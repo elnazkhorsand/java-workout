@@ -56,4 +56,19 @@ public class MyUtility {
 
         return outputObject.toString().trim();
     }
+
+    public static String capitalizeFirstLetter(String... words) {
+        String firstCharacter;
+        String restOfLetters;
+
+        StringBuilder outputObject = new StringBuilder();
+
+        for (String word:words){
+            firstCharacter = word.substring(0,1).toUpperCase();
+            restOfLetters = word.substring(1).toLowerCase();
+
+            outputObject.append(firstCharacter).append(restOfLetters).append(" ");
+        }
+        return outputObject.toString().trim();
+    }
 }
