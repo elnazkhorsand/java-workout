@@ -12,4 +12,9 @@ public class WhenWorkingWithJavaStrings {
                 //.isEqual("Orange Duck");
     }
 
+    @Test
+    public void reverseThreeStrings(){
+        assertThat(MyUtility.reverse("Duck","Orange","An")).isEqualTo("An Orange Duck");
+    }
+
 }
