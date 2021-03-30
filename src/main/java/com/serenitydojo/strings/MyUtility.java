@@ -1,7 +1,11 @@
 package com.serenitydojo.strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+
+import static java.util.Collections.*;
 
 public class MyUtility {
     public static String reverse(String firstString, String secondString) {
@@ -33,5 +37,13 @@ public class MyUtility {
         }
 
         return reversedList;
+    }
+
+    public static List<String> reverseList(String... strings) {
+        List<String> reversedList = Arrays.asList(strings);
+
+        Collections.reverse(reversedList);
+
+         return reversedList;
     }
 }

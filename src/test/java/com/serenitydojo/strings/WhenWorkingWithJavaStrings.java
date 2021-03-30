@@ -34,4 +34,12 @@ public class WhenWorkingWithJavaStrings {
         assertThat(MyUtility.reverseList(originalList)).isEqualTo(expectedReversed);
     }
 
+    @Test
+    public void reverseAnArrayAndReturnAList(){
+        List<String> originalList = Arrays.asList("One", "Two", "Three", "Four");
+        List<String> expectedReversed = Arrays.asList("Six", "Five", "Four", "Three", "Two", "One");
+
+        assertThat(MyUtility.reverseList("One", "Two", "Three", "Four", "Five", "Six")).isEqualTo(expectedReversed);
+    }
+
 }
