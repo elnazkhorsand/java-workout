@@ -17,4 +17,9 @@ public class WhenWorkingWithJavaStrings {
         assertThat(MyUtility.reverse("Duck","Orange","An")).isEqualTo("An Orange Duck");
     }
 
+    @Test
+    public void reverseArrayOfStrings(){
+        assertThat(MyUtility.reverse("One", "Two", "Three", "Four", "Five", "Six")).isEqualTo("Six Five Four Three Two One");
+    }
+
 }
