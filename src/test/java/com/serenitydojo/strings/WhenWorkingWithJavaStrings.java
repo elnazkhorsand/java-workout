@@ -42,4 +42,8 @@ public class WhenWorkingWithJavaStrings {
         assertThat(MyUtility.reverseList("One", "Two", "Three", "Four", "Five", "Six")).isEqualTo(expectedReversed);
     }
 
+    @Test
+    public void capitalizeArrayOfWordsAndReturnsAString() {
+        assertThat(MyUtility.capitalizeWords("one", "two", "three", "four")).isEqualTo("ONE TWO THREE FOUR");
+    }
 }

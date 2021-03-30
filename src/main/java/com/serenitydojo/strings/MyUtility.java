@@ -46,4 +46,14 @@ public class MyUtility {
 
          return reversedList;
     }
+
+    public static String capitalizeWords(String... words) {
+        StringBuilder outputObject = new StringBuilder();
+
+        for (String word: words){
+            outputObject.append(word.toUpperCase()).append(" ");
+        }
+
+        return outputObject.toString().trim();
+    }
 }
