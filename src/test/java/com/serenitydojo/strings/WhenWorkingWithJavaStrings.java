@@ -51,4 +51,13 @@ public class WhenWorkingWithJavaStrings {
     public void capitalizeOnlyTheFirstLetterOFEachWordAndReturnAStringWithSpace(){
         assertThat(MyUtility.capitalizeFirstLetter("bLUe", "GReen", "yeLLOW", "bLAck")).isEqualTo("Blue Green Yellow Black");
     }
+
+    @Test
+    public void checkingColorSwitch(){
+        String[] expressions = {"Blue shirt","red Hose","Hat - blue","Blue blue - bLue_bLUE"};
+        String[] expected = {"yellow shirt","red Hose","Hat - yellow","yellow yellow - yellow_yellow"};
+        String switchThis = "blue";
+        String switchWith = "yellow";
+        assertThat(MyUtility.switchColor(expressions, switchThis,switchWith)).isEqualTo(expected);
+    }
 }

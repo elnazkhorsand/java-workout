@@ -71,4 +71,18 @@ public class MyUtility {
         }
         return outputObject.toString().trim();
     }
+
+    public static String[] switchColor(String[] expressions, String switchThis, String switchWith) {
+
+        int inputArraySize = expressions.length;
+        String[] output;
+        output = new String[inputArraySize];
+        String pattern = "[bB][lL][uU][eE]";
+
+        for (int i=0;i<inputArraySize;i++){
+            output[i] = expressions[i].replaceAll(pattern,switchWith);
+        }
+
+        return output;
+    }
 }
