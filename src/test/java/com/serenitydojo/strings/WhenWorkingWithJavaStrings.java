@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -60,4 +61,21 @@ public class WhenWorkingWithJavaStrings {
         String switchWith = "yellow";
         assertThat(MyUtility.switchColor(expressions, switchThis,switchWith)).isEqualTo(expected);
     }
+
+    @Test
+    public void addingStringsTogether() {
+
+        var colorA = "red";
+        var colorB = "green";
+        var colorC = "blue";
+        var colorD = "yellow";
+        var colorE = "gray";
+        var colorF = "white";
+        var colorG = "black";
+
+        assertThat(MyUtility.addingStringsCommaSeparated(colorA,colorB,colorC)).isEqualTo("red,green,blue");
+        assertThat(MyUtility.addingStringsCommaSeparated(colorA,colorB,colorC,colorD,colorE,colorF,colorG)).isEqualTo("red,green,blue,yellow,gray,white,black");
+
+    }
+
 }

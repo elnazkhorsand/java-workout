@@ -85,4 +85,17 @@ public class MyUtility {
 
         return output;
     }
+
+    public static String addingStringsCommaSeparated(String... strings) {
+        StringBuilder outputObj = new StringBuilder();
+        int stringSize;
+
+        for(String string:strings){
+            outputObj.append(string).append(",");
+        }
+        stringSize = outputObj.length();
+        outputObj.replace(stringSize-1,stringSize, "");
+
+        return outputObj.toString();
+    }
 }
