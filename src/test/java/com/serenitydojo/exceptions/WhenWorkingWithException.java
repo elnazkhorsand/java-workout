@@ -44,4 +44,11 @@ public class WhenWorkingWithException {
         Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(0);
     }
 
+    @Test
+    public void shouldGetLengthOfFileWithOneCharacter(){
+        StringProcessor stringProcessor = new StringProcessor();
+        File myFile = new File("C:\\Users\\Elnaz\\Documents\\Java\\testingFileWithOneCharacter.txt");
+
+        Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(1);
+    }
 }
