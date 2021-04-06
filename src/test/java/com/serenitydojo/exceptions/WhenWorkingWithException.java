@@ -4,6 +4,10 @@ import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.io.File;
+import java.net.MalformedURLException;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class WhenWorkingWithException {
 
@@ -14,7 +18,7 @@ public class WhenWorkingWithException {
         String expectedOutput = input + " has a length of " + lengthOfInput;
         StringProcessor stringProcessor = new StringProcessor();
 
-        Assertions.assertThat(stringProcessor.showLengthOf(input)).isEqualTo(expectedOutput);
+        assertThat(stringProcessor.showLengthOf(input)).isEqualTo(expectedOutput);
     }
 
     @Test
@@ -24,7 +28,7 @@ public class WhenWorkingWithException {
 
         StringProcessor stringProcessor = new StringProcessor();
 
-        Assertions.assertThat(stringProcessor.showLength(input)).isEqualTo(lengthOfInput);
+        assertThat(stringProcessor.showLength(input)).isEqualTo(lengthOfInput);
     }
 
     @Test
@@ -33,7 +37,7 @@ public class WhenWorkingWithException {
 
         StringProcessor stringProcessor = new StringProcessor();
 
-        Assertions.assertThat(stringProcessor.showLength(input)).isEqualTo(0);
+        assertThat(stringProcessor.showLength(input)).isEqualTo(0);
     }
 
     @Test
@@ -41,7 +45,7 @@ public class WhenWorkingWithException {
         StringProcessor stringProcessor = new StringProcessor();
         File myFile = new File("C:\\Users\\Elnaz\\Documents\\Java\\testingEmptyFile.txt");
 
-        Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(0);
+        assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(0);
     }
 
     @Test
@@ -49,7 +53,7 @@ public class WhenWorkingWithException {
         StringProcessor stringProcessor = new StringProcessor();
         File myFile = new File("C:\\Users\\Elnaz\\Documents\\Java\\testingFileWithOneCharacter.txt");
 
-        Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(1);
+        assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(1);
     }
 
     @Test
@@ -57,6 +61,15 @@ public class WhenWorkingWithException {
         StringProcessor stringProcessor = new StringProcessor();
         File myFile = new File("C:\\Users\\Elnaz\\Documents\\Java\\notExistingFile.txt");
 
-        Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(0);
+        assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(0);
     }
+
+    @Test
+    public void shouldFindTheDefaultPort() throws MalformedURLException {
+        String myUrl = "https://www.google.com";
+        StringProcessor stringProcessor = new StringProcessor();
+
+        assertThat(stringProcessor.getPortOf(myUrl)).isEqualTo(443);
+    }
+
 }

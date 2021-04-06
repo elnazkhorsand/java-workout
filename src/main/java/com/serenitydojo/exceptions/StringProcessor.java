@@ -1,6 +1,10 @@
 package com.serenitydojo.exceptions;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class StringProcessor {
     public String showLengthOf(String input) {
@@ -13,5 +17,10 @@ public class StringProcessor {
 
     public long getLengthOfFile(File myFile) {
         return myFile.length();
+    }
+
+    public int getPortOf(String stringURL) throws MalformedURLException {
+        URL myUrl = new URL(stringURL);
+        return myUrl.getDefaultPort();
     }
 }
