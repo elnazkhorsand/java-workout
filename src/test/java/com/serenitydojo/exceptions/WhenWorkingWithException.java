@@ -51,4 +51,12 @@ public class WhenWorkingWithException {
 
         Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(1);
     }
+
+    @Test
+    public void shouldGetLengthOfNotExistingFileAsZero(){
+        StringProcessor stringProcessor = new StringProcessor();
+        File myFile = new File("C:\\Users\\Elnaz\\Documents\\Java\\notExistingFile.txt");
+
+        Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(0);
+    }
 }
