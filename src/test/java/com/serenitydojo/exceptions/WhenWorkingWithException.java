@@ -15,4 +15,13 @@ public class WhenWorkingWithException {
         Assertions.assertThat(stringProcessor.showLengthOf(input)).isEqualTo(expectedOutput);
     }
 
+    @Test
+    public void shouldShowLengthOfStringAsAnInt(){
+        String input = "Some string";
+        long lengthOfInput = input.length();
+
+        StringProcessor stringProcessor = new StringProcessor();
+
+        Assertions.assertThat(stringProcessor.showLength(input)).isEqualTo(lengthOfInput);
+    }
 }

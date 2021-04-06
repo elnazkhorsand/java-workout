@@ -5,4 +5,7 @@ public class StringProcessor {
         return input + " has a length of " + input.length();
     }
 
+    public long showLength(String input) {
+        return input.length();
+    }
 }
