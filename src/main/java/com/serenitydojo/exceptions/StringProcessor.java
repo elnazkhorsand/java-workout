@@ -6,6 +6,6 @@ public class StringProcessor {
     }
 
     public long showLength(String input) {
-        return input.length();
+        return (input==null)?0:input.length();
     }
 }

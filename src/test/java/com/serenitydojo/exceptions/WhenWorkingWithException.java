@@ -24,4 +24,13 @@ public class WhenWorkingWithException {
 
         Assertions.assertThat(stringProcessor.showLength(input)).isEqualTo(lengthOfInput);
     }
+
+    @Test
+    public void shouldShowLengthOfNullStringAsZero(){
+        String input=null;
+
+        StringProcessor stringProcessor = new StringProcessor();
+
+        Assertions.assertThat(stringProcessor.showLength(input)).isEqualTo(0);
+    }
 }
