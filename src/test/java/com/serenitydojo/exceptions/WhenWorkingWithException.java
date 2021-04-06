@@ -3,6 +3,8 @@ package com.serenitydojo.exceptions;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
+import java.io.File;
+
 public class WhenWorkingWithException {
 
     @Test
@@ -33,4 +35,13 @@ public class WhenWorkingWithException {
 
         Assertions.assertThat(stringProcessor.showLength(input)).isEqualTo(0);
     }
+
+    @Test
+    public void shouldGetLengthOfFile(){
+        StringProcessor stringProcessor = new StringProcessor();
+        File myFile = new File("C:\\Users\\Elnaz\\Documents\\Java\\testingEmptyFile.txt");
+
+        Assertions.assertThat(stringProcessor.getLengthOfFile(myFile)).isEqualTo(0);
+    }
+
 }
