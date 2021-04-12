@@ -1,7 +1,7 @@
 package com.serenitydojo.exceptions;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
+import org.w3c.dom.css.CSSUnknownRule;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -65,11 +65,18 @@ public class WhenWorkingWithException {
     }
 
     @Test
-    public void shouldFindTheDefaultPort() throws MalformedURLException {
+    public void shouldFindTheDefaultPort(){
         String myUrl = "https://www.google.com";
         StringProcessor stringProcessor = new StringProcessor();
 
-        assertThat(stringProcessor.getPortOf(myUrl)).isEqualTo(443);
+        assertThat(stringProcessor.getDefaultPortOf(myUrl)).isEqualTo(443);
     }
 
+    @Test(expected = UnknownURLFormatException.class)
+    public void shouldThrowExceptionUnknownURLForGetPortOf(){
+        String myUrl = "a:...";
+        StringProcessor stringProcessor = new StringProcessor();
+
+        assertThat(stringProcessor.getDefaultPortOf(myUrl)).isEqualTo(443);
+    }
 }

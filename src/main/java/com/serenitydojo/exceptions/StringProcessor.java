@@ -19,8 +19,13 @@ public class StringProcessor {
         return myFile.length();
     }
 
-    public int getPortOf(String stringURL) throws MalformedURLException {
-        URL myUrl = new URL(stringURL);
-        return myUrl.getDefaultPort();
+    public int getDefaultPortOf(String stringURL){
+        try {
+            URL myUrl = new URL(stringURL);
+            return myUrl.getDefaultPort();
+        }
+        catch (MalformedURLException malformedURLException){
+            throw new UnknownURLFormatException("The format of the provided URL is unknown!", malformedURLException);
+        }
     }
 }
